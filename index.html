@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mapatelli is an interactive map application that allows users to discover and save locations with ease. It offers real-time geolocation, dynamic map rendering, and seamless user interaction for storing, viewing, and managing locations. Whether exploring new places or keeping track of favorites, Mapatelli provides an intuitive interface and engaging experience for location-based discovery."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/Mapatelli-logo-Favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>Mapatelli // Know about places</title>
+  </head>
+  <body>
+    <div class="menu">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="menu__icon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        />
+      </svg>
+    </div>
+    <div class="close">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="menu__icon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18 18 6M6 6l12 12"
+        />
+      </svg>
+    </div>
+    <aside class="sidebar">
+      <img src="images/Mapatelli-Logo.png" alt="Mapatelli-Logo" class="logo" />
+
+      <p class="welcome">
+        🔰Click on map to know about a location. <span class="loader"></span>
+      </p>
+
+      <ul class="locations__list">
+        <!-- <li class="locations__item">
+          <button class="close-icon">&times;</button>
+          <h2 class="locations__title">FCT Abuja, Nigeria.</h2>
+          <p class="locations__description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque est
+            vitae voluptates non doloribus maxime culpa cupiditate aperiam quae
+            eos.
+          </p>
+        </li> -->
+      </ul>
+
+      <footer class="footer">
+        <p class="copyright">
+          Copyright &copy; <span>2024</span> by
+          <a href="#">Franklin Chidera</a>. The sole aim was to learn about how
+          to use the leaflet library.
+        </p>
+      </footer>
+    </aside>
+    <div id="map"></div>
+  </body>
+</html>

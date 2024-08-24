@@ -1,0 +1,222 @@
+/* Reset margin, padding, and set box-sizing to border-box for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set a base font-size to 62.5% for easier rem calculations (1rem = 10px) */
+html {
+  font-size: 62.5%;
+}
+
+/* Style the body element with background color, font settings, and layout properties */
+body {
+  background-color: #eee;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  height: 100vh;
+  padding: 3rem;
+  overscroll-behavior-y: none;
+  display: flex;
+}
+
+/* Styling for menu and close buttons */
+.menu,
+.close {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f1e20;
+  z-index: 1000000000000000000000;
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  cursor: pointer;
+  transform: translateY(-30rem);
+}
+
+/* Hide the close button by default */
+.close {
+  display: none;
+}
+
+/* Style the icon inside the menu button */
+.menu__icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  stroke: #eee;
+}
+
+/* Loader animation styles */
+.loader {
+  width: 2rem;
+  height: 2rem;
+  border: 0.2rem solid #eee;
+  border-bottom-color: transparent;
+  display: inline-block;
+  border-radius: 50%;
+  animation: rotation 1s linear infinite;
+  display: none;
+}
+
+/* Keyframes for the loader rotation animation */
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Sidebar styling */
+.sidebar {
+  flex: 0 0 50rem;
+  height: 100%;
+  background-color: #1f1e20;
+  text-align: center;
+  padding: 5rem 2.5rem;
+  color: #e2e1e1;
+}
+
+.logo {
+  height: 5rem;
+}
+
+/* Styling the list of locations */
+.locations__list {
+  margin-top: 3rem;
+  list-style: none;
+  height: 77%;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+/* Welcome message styling */
+.welcome {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+/* Styling for each location item in the list */
+.locations__item {
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 3px;
+  box-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.3);
+  position: relative;
+  cursor: pointer;
+  border-top: 3px solid #37b24d;
+  margin-bottom: 1.8rem;
+}
+
+/* Styling for the title in each location item */
+.locations__item h2 {
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+/* Styling for the description inside each location item */
+.locations__item p {
+  line-height: 1.6;
+  font-size: 1.6rem;
+}
+
+/* Close icon styling inside location items */
+.close-icon {
+  font-size: 3rem;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  opacity: 0;
+  border: none;
+  outline: none;
+  background: none;
+  color: #eee;
+  cursor: pointer;
+}
+
+/* Show the close icon when hovering over the location item */
+.locations__item:hover .close-icon {
+  opacity: 1;
+}
+
+/* Footer styling */
+.footer {
+  padding: 2rem 4rem;
+}
+
+/* Copyright text styling */
+.copyright {
+  font-size: 1.2rem;
+}
+
+/* Styling for links within the copyright text */
+.copyright a:any-link {
+  color: #37b24d;
+  line-height: 1.6;
+}
+
+/* Highlight certain text inside the copyright section */
+.copyright span {
+  color: #37b24d;
+}
+
+/* Map container styling */
+#map {
+  background-color: #ddd;
+  flex: 1; /* Allow map to take up remaining space */
+  transition: linear 1s;
+}
+
+/* Leaflet popup styling */
+.leaflet-popup-content-wrapper {
+  background-color: #1f1e20;
+  border-radius: 2px;
+  color: #eee;
+  border-top: 3px solid #37b24d;
+}
+
+/* Leaflet popup content text styling */
+.leaflet-popup-content {
+  font-size: 1.6rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Leaflet popup arrow (tip) styling */
+.leaflet-popup-tip {
+  background-color: #1f1e20;
+}
+
+/* Responsive adjustments for screens smaller than 75em (1200px) */
+@media (max-width: 75em) {
+  html {
+    font-size: 50%; /* Adjust font-size for smaller screens */
+  }
+}
+
+/* Responsive adjustments for screens smaller than 56.25em (900px) */
+@media (max-width: 56.25em) {
+  .sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100000000; /* High z-index for visibility */
+    width: 40rem;
+    transform: translateX(-100%);
+    transition: all 0.5s; /* Smooth transition for sidebar slide */
+  }
+
+  /* Show the menu and close buttons on smaller screens */
+  .menu,
+  .close {
+    transform: translateY(0); /* Move into view */
+  }
+}
