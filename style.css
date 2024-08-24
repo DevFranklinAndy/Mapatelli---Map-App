@@ -205,6 +205,7 @@ body {
 /* Responsive adjustments for screens smaller than 56.25em (900px) */
 @media (max-width: 56.25em) {
   .sidebar {
+    height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
