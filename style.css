@@ -214,6 +214,10 @@ body {
     transition: all 0.5s; /* Smooth transition for sidebar slide */
   }
 
+  .close-icon {
+    opacity: 1;
+  }
+
   /* Show the menu and close buttons on smaller screens */
   .menu,
   .close {
